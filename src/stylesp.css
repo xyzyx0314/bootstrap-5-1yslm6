@@ -1,0 +1,76 @@
+/*p-*/
+.p-m{
+  margin-top: 3%;
+  margin-left: 3%;
+}
+.p-title0{
+  font-size: 90px;
+}
+.p-title1{
+  font-size: 50px;
+}
+.p-title2{
+  font-size: 40px;
+}
+.p-title3{
+  font-size: 30px;
+  margin-left: 1%;
+}
+.p-title4{
+  font-size: 20px;
+  margin-left: 2%;
+}
+.p-title5{
+  font-size: 20px;
+  margin-left: 3%;
+}
+.p-word{
+  margin-top: 1%;
+  margin-left: 5%;
+  margin-right: 10%;
+  margin-bottom: 1%;
+  padding-top: 1%;
+  padding-left: 1%;
+  padding-right: 1%;
+  padding-bottom: 1%;
+  text-indent: 2em;
+  font-size: 16px;
+  background-color: #e7e7e7;
+}
+.p-m img{
+  width: 80%;
+}
+.p-list0{
+  color: #335a94;
+  font-size: 30px;
+}
+.p-list1{
+  color: #335a94;
+  font-size: 25px;
+}
+.p-list2{
+  color: #335a94;
+  font-size: 14px;
+  margin-left: 1%;
+}
+.p-list3{
+  color: #335a94;
+  font-size: 13px;
+  margin-left: 5%;
+}
+.p-list4{
+  color: #335a94;
+  font-size: 12px;
+  margin-left: 12%;
+}
+.p-list5{
+  color: #335a94;
+  font-size: 20px;
+  color: rgb(217, 236, 229);
+}
+
+
+.p-bot{
+  margin-left: -3%;
+  background-color: white;
+}
