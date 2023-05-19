@@ -4,345 +4,76 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="main.js"></script>     
+    
     <link href="bootstrap.min.css" rel="stylesheet">
+
     <link href="styles.css" rel="stylesheet">
     <link href="stylesp.css" rel="stylesheet">
+
     <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
     <script src="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/js/bootstrap.bundle.min.js"></script>
-    <script src="js\bootstrap.min.js"></script>
-    <script src="index.js"></script>
+    
+    
+    <script src="https://cdn.staticfile.org/vue/3.0.5/vue.global.js"></script>
 
+    <!-- 代码高亮 -->
+    <link rel="stylesheet" href="html/highlight/styles/night-owl.min.css">
+    <script src="html/highlight/highlight.min.js"></script>
+    
+    <!-- 音乐播放器 -->
+    <link rel="stylesheet" href="APlayer-master/dist/APlayer.min.css">
+    <script src="APlayer-master/dist/APlayer.min.js"></script>
+    <script src="color-thief-master/src/color-thief.js"></script>
 
-    <link rel="stylesheet" href="highlight/styles/default.min.css">
-    <script src="highlight/highlight.min.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
   </head>
-  <script>
-
-    /*最初始界面*/
-    var xmlhttp;
-    if (window.XMLHttpRequest)
-    {
-      xmlhttp=new XMLHttpRequest();
-    }
-    else
-    {
-      xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-    }
-    xmlhttp.onreadystatechange=function()
-    {
-      if (xmlhttp.readyState==4 && xmlhttp.status==200)
-      {
-        document.getElementById("p-page").innerHTML=xmlhttp.responseText;
-      }
-    }
-    xmlhttp.open("GET","home.html",true);
-    xmlhttp.send();
-    /*载入对应*/
-    function loadHome()
-    {
-      var xmlhttp,xmlhttp2;
-      if (window.XMLHttpRequest)
-      {
-        xmlhttp=new XMLHttpRequest();
-        xmlhttp2=new XMLHttpRequest();
-      }
-      else
-      {
-        xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-        xmlhttp2=new ActiveXObject("Microsoft.XMLHTTP");
-      }
-      xmlhttp.onreadystatechange=function()
-      {
-        if (xmlhttp.readyState==4 && xmlhttp.status==200)
-        {
-          document.getElementById("p-page").innerHTML=xmlhttp.responseText;
-        }
-      }
-      xmlhttp2.onreadystatechange=function()
-      {
-        if (xmlhttp2.readyState==4 && xmlhttp2.status==200)
-        {
-          document.getElementById("p-list").innerHTML=xmlhttp2.responseText;
-        }
-      }
-      xmlhttp.open("GET","week1.html",true);
-      xmlhttp.send();
-      xmlhttp2.open("GET","week1_list.html",true);
-      xmlhttp2.send();
-    }
-    function loadNote()
-    {
-      var xmlhttp;
-      if (window.XMLHttpRequest)
-      {
-        xmlhttp=new XMLHttpRequest();
-      }
-      else
-      {
-        xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-      }
-      xmlhttp.onreadystatechange=function()
-      {
-        if (xmlhttp.readyState==4 && xmlhttp.status==200)
-        {
-          document.getElementById("p-page").innerHTML=xmlhttp.responseText;
-        }
-      }
-      xmlhttp.open("GET","note.html",true);
-      xmlhttp.send();
-    }
-    function loadConnect()
-    {
-      var xmlhttp;
-      if (window.XMLHttpRequest)
-      {
-        xmlhttp=new XMLHttpRequest();
-      }
-      else
-      {
-        xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-      }
-      xmlhttp.onreadystatechange=function()
-      {
-        if (xmlhttp.readyState==4 && xmlhttp.status==200)
-        {
-          document.getElementById("p-page").innerHTML=xmlhttp.responseText;
-        }
-      }
-      xmlhttp.open("GET","connect.html",true);
-      xmlhttp.send();
-    }
-    function loadReward()
-    {
-      var xmlhttp;
-      if (window.XMLHttpRequest)
-      {
-        xmlhttp=new XMLHttpRequest();
-      }
-      else
-      {
-        xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-      }
-      xmlhttp.onreadystatechange=function()
-      {
-        if (xmlhttp.readyState==4 && xmlhttp.status==200)
-        {
-          document.getElementById("p-page").innerHTML=xmlhttp.responseText;
-        }
-      }
-      xmlhttp.open("GET","reward.html",true);
-      xmlhttp.send();
-    }
 
 
-
-    function loadWeek1()
-    {
-      var xmlhttp,xmlhttp2;
-      if (window.XMLHttpRequest)
-      {
-        xmlhttp=new XMLHttpRequest();
-        xmlhttp2=new XMLHttpRequest();
-      }
-      else
-      {
-        xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-        xmlhttp2=new ActiveXObject("Microsoft.XMLHTTP");
-      }
-      xmlhttp.onreadystatechange=function()
-      {
-        if (xmlhttp.readyState==4 && xmlhttp.status==200)
-        {
-          document.getElementById("p-page").innerHTML=xmlhttp.responseText;
-        }
-      }
-      xmlhttp2.onreadystatechange=function()
-      {
-        if (xmlhttp2.readyState==4 && xmlhttp2.status==200)
-        {
-          document.getElementById("p-list").innerHTML=xmlhttp2.responseText;
-        }
-      }
-      xmlhttp.open("GET","week1.html",true);
-      xmlhttp.send();
-      xmlhttp2.open("GET","week1_list.html",true);
-      xmlhttp2.send();
-    }
-    function loadWeek2()
-    {
-      var xmlhttp;
-      if (window.XMLHttpRequeWebst)
-      {
-        xmlhttp=new XMLHttpRequest();
-      }
-      else
-      {
-        xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-      }
-      xmlhttp.onreadystatechange=function()
-      {
-        if (xmlhttp.readyState==4 && xmlhttp.status==200)
-        {
-          document.getElementById("p-page").innerHTML=xmlhttp.responseText;
-        }
-      }
-      xmlhttp.open("GET","week2.html",true);
-      xmlhttp.send();
-    }  
-    function loadWeek3()
-    {
-      var xmlhttp;
-      if (window.XMLHttpRequeWebst)
-      {
-        xmlhttp=new XMLHttpRequest();
-      }
-      else
-      {
-        xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-      }
-      xmlhttp.onreadystatechange=function()
-      {
-        if (xmlhttp.readyState==4 && xmlhttp.status==200)
-        {
-          document.getElementById("p-page").innerHTML=xmlhttp.responseText;
-        }
-      }
-      xmlhttp.open("GET","week3.html",true);
-      xmlhttp.send();
-    }
-    function loadWeek4()
-    {
-      var xmlhttp;
-      if (window.XMLHttpRequeWebst)
-      {
-        xmlhttp=new XMLHttpRequest();
-      }
-      else
-      {
-        xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-      }
-      xmlhttp.onreadystatechange=function()
-      {
-        if (xmlhttp.readyState==4 && xmlhttp.status==200)
-        {
-          document.getElementById("p-page").innerHTML=xmlhttp.responseText;
-        }
-      }
-      xmlhttp.open("GET","week4.html",true);
-      xmlhttp.send();
-    }
-    function loadCF1826()
-    {
-      var xmlhttp;
-      if (window.XMLHttpRequest)
-      {
-        xmlhttp=new XMLHttpRequest();
-      }
-      else
-      {
-        xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-      }
-      xmlhttp.onreadystatechange=function()
-      {
-        if (xmlhttp.readyState==4 && xmlhttp.status==200)
-        {
-          document.getElementById("p-page").innerHTML=xmlhttp.responseText;
-        }
-      }
-      xmlhttp.open("GET","cf1826.html",true);
-      xmlhttp.send();
-    }
-    function loadCF1818()
-    {
-      var xmlhttp,xmlhttp2;
-      if (window.XMLHttpRequest)
-      {
-        xmlhttp=new XMLHttpRequest();
-        xmlhttp2=new XMLHttpRequest();
-      }
-      else
-      {
-        xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-        xmlhttp2=new ActiveXObject("Microsoft.XMLHTTP");
-      }
-      xmlhttp.onreadystatechange=function()
-      {
-        if (xmlhttp.readyState==4 && xmlhttp.status==200)
-        {
-          document.getElementById("p-page").innerHTML=xmlhttp.responseText;
-        }
-      }
-      xmlhttp2.onreadystatechange=function()
-      {
-        if (xmlhttp2.readyState==4 && xmlhttp2.status==200)
-        {
-          document.getElementById("p-list").innerHTML=xmlhttp2.responseText;
-        }
-      }
-      xmlhttp.open("GET","cf1818.html",true);
-      xmlhttp.send();
-      xmlhttp2.open("GET","cf1818_list.html",true);
-      xmlhttp2.send();
-    }
-    function loadHZNUOJ()
-    {
-      window.open("https://acm.hznu.edu.cn/OJ/userinfo.php?user=2021212205006");
-    } 
-    function loadCF()
-    {
-      window.open("https://codeforces.com/");
-    }
-    function loadVJ()
-    {
-      window.open("https://vjudge.net/group/hznuacm21");
-    }
-    function loadLuogu()
-    {
-      window.open("https://www.luogu.com.cn/");
-    }     
-    function loadAT()
-    {
-      window.open("https://atcoder.jp/");
-    }     
-    function loadGE()
-    {
-      window.open("https://csacademy.com/app/graph_editor/");
-    }     
-    function loadQuanta()
-    {
-      window.open("https://mooc.hznu.edu.cn/#/");
-    }
-    function load404()
-    {
-      var xmlhttp;
-      if (window.XMLHttpRequest)
-      {
-        xmlhttp=new XMLHttpRequest();
-      }
-      else
-      {
-        xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-      }
-      xmlhttp.onreadystatechange=function()
-      {
-        if (xmlhttp.readyState==4 && xmlhttp.status==200)
-        {
-          document.getElementById("p-page").innerHTML=xmlhttp.responseText;
-        }
-      }
-      xmlhttp.open("GET","404.html",true);
-      xmlhttp.send();
-    }
-    
-
-  </script>
   <body>
-    
+      
+<!-- 上侧导航 --> 
     <div class="m-top">
+      <div class="row">
+        <div class="person">
+          <img src="img\person.png" class="rounded-circle" alt="Cinque Terre" width="150"> 
+        </div>
+        <div class="name">
+          Journey'Blog
+        </div>
+        <div class="github" onclick="loadGithub()">
+          <img src="img\github.svg" class="rounded-circle" alt="Cinque Terre" width="150"> 
+        </div>
+        <div class="lock" onclick="loadGithub()">
+          <img src="img\lock.svg" class="rounded-circle" alt="Cinque Terre" width="150">
+        </div>
 
+        <!-- <div class="loading bk">
+          <div class="pacMan">
+            <div class="eye"></div>
+            <div class="mouth1"></div>
+            <div class="mouth2"></div>
+            <div class="beanOne"></div>
+            <div class="beanTwo"></div>
+          </div>
+        </div> -->
+
+
+        <div class="music">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        </div>
+      
     </div>
+<!-- 左侧导航 -->        
+  <div data-bs-spy="scroll" data-bs-target="#navbar-example3" data-bs-offset="0" class="scrollspy-example-2" tabindex="0">
+
     <div class="m-lt" id="m-lt">
       <div class="m-lt-out box-hide-scrollbar">
         <div class="m-lt-list">
@@ -375,7 +106,7 @@
 <!-- 打赏 -->                      
           <button class="m-lt-card" type="button" onclick="loadReward()">
             <img src="img\reward.svg"/>
-            打赏
+            投喂
           </button>
           <div class="m-lt-title">分组</div>
 <!-- web -->
@@ -417,11 +148,15 @@
             </div>
             <div id="menuNote" class="collapse" data-bs-parent="#accordion">
 
+              <button class="m-lt-card" type="button" onclick="loadCF1820()">
+                <img src="img\answer.svg"/>
+                Codeforces Round 866 (Div. 2)
+              </button>
               <button class="m-lt-card" type="button" onclick="loadCF1826()">
                 <img src="img\answer.svg"/>
                 Codeforces Round 870 (Div. 2)
               </button>
-              <button class="m-lt-card" type="button" onclick="loadCF1818()">
+              <button class="m-lt-card" type="button" onclick="loadCF1818()" id="cf1818">
                 <img src="img\answer.svg"/>
                 Codeforces Round 869 (Div. 2)
               </button>
@@ -449,7 +184,7 @@
               <img src="img\commonly.svg"/>
               网站    
               <h class="open">
-                <img src="img\open.svg"/>
+                <img src="img\left.svg"/>
               </h>
             </div>
             <div id="menuOne" class="collapse" data-bs-parent="#accordion">               
@@ -507,19 +242,95 @@
         </div>
       </div>
     </div>
+<!-- 中间文章 -->
 
-    <div class="m-md" >
-      <div class="m-md-out box-hide-scrollbar" onscroll="pageScroll()">
-        <div class="p-page" id="p-page">
-        </div>
+
+  </div>
+  <div class="m-md" id="m-md">
+    <div class="m-md-out box-hide-scrollbar" onscroll="pageScroll()">
+      <div class="m-md-top" id="m-md-top"></div>
+      <div class="p-page" id="p-page">
       </div>
     </div>
-
+  </div>   
+<!-- 右侧目录 -->
     <div class="m-rt">
       <div class="m-rt-out box-hide-scrollbar">
         <div class="p-list" id="p-list">
         </div>
+      </div>      
+
+    </div>
+    
+<!-- 右下回顶部 -->
+    <div class="m-rtbt">
+      <a class="nav-link backtop" href="#m-md-top">
+        <img src="img/top.svg"/>
+      </a>
+      <div class="moon">
+        <img src="img/moon.svg"/>
       </div>
     </div>
+
+    <div id="aplayer01"></div>
+    <script type="text/javascript">
+        const ap = new APlayer({
+            container: document.getElementById('aplayer01'),
+            //theme: '#C6D7E7',
+            //theme: '#e9e9e9',
+            fixed: true,
+            lrcType: 3,
+            audio: [
+
+                {
+                    name: 'GLISTENING♭',
+                    artist: '安野希世乃',
+                    url:
+                        'music/GLISTENING♭.mp3',
+                    cover:
+                        'http://music.163.com/#/song?id=486194382',
+                    lrc:
+                        "lrc/GLISTENING♭-安野希世乃.lrc",
+                },
+            ]
+        });
+        const colorThief = new ColorThief();
+        const image = new Image();
+        const xhr = new XMLHttpRequest();
+        const setTheme = (index) => {
+            if (!ap.list.audios[index].theme) {
+                xhr.onload = function(){
+                    let coverUrl = URL.createObjectURL(this.response);
+                    image.onload = function(){
+                        let color = colorThief.getColor(image);
+                        ap.theme(`rgb(${color[0]}, ${color[1]}, ${color[2]})`, index);
+                        URL.revokeObjectURL(coverUrl)
+                    };
+                    image.src = coverUrl;
+                }
+                xhr.open('GET', ap.list.audios[index].cover, true);
+                xhr.responseType = 'blob';
+                xhr.send();
+            }
+        };
+        setTheme(ap.list.index);
+        ap.on('listswitch', (index) => {
+            setTheme(index);
+        });
+    </script>
   </body>
+  <script src="index.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <script>
+    load();
+    //loadHome();
+    //loadWeek2();
+    loadConnect();
+  </script>
+  <!-- <script>
+    document.querySelector('.mouth1').style.animationPlayState = 'paused';
+    document.querySelector('.mouth2').style.animationPlayState = 'paused';
+    document.querySelector('.beanOne').style.animationPlayState = 'paused';
+    document.querySelector('.beanTwo').style.animationPlayState = 'paused';
+  </script> -->
 </html>
